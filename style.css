@@ -1,0 +1,75 @@
+body {
+  background-color: lightblue;
+}
+.options-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+label {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+select {
+  height: 20px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #298e46;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  height: 26px;
+  width: auto;
+  cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.card {
+  border-radius: 15px;
+  border-color: black;
+  border: 3px solid;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; /* fill the entire parent element */
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.cardFront {
+  background-image: url(question.png);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
